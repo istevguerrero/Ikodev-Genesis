@@ -1,13 +1,14 @@
-## Running React on Repl.it
+## mcrn-event-booking-app-starter
 
-[React](https://reactjs.org/) is a popular JavaScript library for building user interfaces.
+Hi there! This is a react native starter which used to build a awesome Event Booking App based on the Figma design. You can download or clone it to speed up your projects. 
 
-[Vite](https://vitejs.dev/) is a blazing fast frontend build tool that includes features like Hot Module Reloading (HMR), optimized builds, and TypeScript support out of the box.
+### Usage
+```
+yarn install
+```
+```
+yarn ios
+```
 
-Using the two in conjunction is one of the fastest ways to build a web app.
-
-### Getting Started
-- Hit run
-- Edit [App.jsx](#src/App.jsx) and watch it live update!
-
-By default, Replit runs the `dev` script, but you can configure it by changing the `run` field in the `.replit` file.
+### Demo
+[![Watch the video](https://tva1.sinaimg.cn/large/008eGmZEgy1gph8i7901tj30zk0k0n93.jpg)](https://youtu.be/RIxe7DQE3Pk)
