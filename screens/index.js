@@ -4,10 +4,18 @@ import Schedule from './Schedule';
 import Tickets from './Tickets';
 import Mine from './Mine';
 
-export {
+// En este archivo se exportan las distintas pantallas
+
+export{
+
   Featured,
+
   EventDetail,
+
   Schedule,
+
   Tickets,
+  
   Mine
+
 }

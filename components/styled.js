@@ -30,9 +30,9 @@ const McIcon = styled.Image`
   width: ${(props) => (props.size ? props.size + 'px' : '16px')};
   height: ${(props) => (props.size ? props.size + 'px' : '16px')};
 `;
-const McAvatar = styled.Image`
-  width: ${(props) => (props.size ? props.size + 'px' : '40px')};
-  height: ${(props) => (props.size ? props.size + 'px' : '40px')};
-`;
+//const McAvatar = styled.Image`
+  //width: ${(props) => (props.size ? props.size + 'px' : '40px')};
+  //height: ${(props) => (props.size ? props.size + 'px' : '40px')};
+//`;
 
-export { McText, McIcon, McAvatar };
+export { McText, McIcon};

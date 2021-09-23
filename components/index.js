@@ -1,4 +1,4 @@
 import styled from './styled';
-import { McText, McIcon, McAvatar } from './styled';
+import { McText, McIcon} from './styled';
 
-export { McText, McIcon, McAvatar };
+export { McText, McIcon};

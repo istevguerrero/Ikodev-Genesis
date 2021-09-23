@@ -1,13 +1,13 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import {Text, View, StyleSheet} from 'react-native';
 
-const Tickets = () => {
+const EventDetail = () => {
 
   return (
 
     <View style={styles.container}>
 
-      <Text style={{ color: '#fff', fontSize: 30 }}>Tickets</Text>
+      <Text style={{ color: '#fff', fontSize: 30 }}>EventDetail</Text>
 
     </View>
 
@@ -26,9 +26,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
 
     alignItems: 'center',
-    
-  },
 
+  },
+  
 });
 
-export default Tickets;
+export default EventDetail;
