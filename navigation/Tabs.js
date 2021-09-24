@@ -12,7 +12,7 @@ const TabIcon = ({ focused, icon }) => {
     <View style={{ alignItems: 'center', justifyContent: 'center' }}>
       <McIcon
         size={focused ? 24 : 32}
-        source={icon} 
+        source={icon}
         resizeMode="contain"
         style={{
           tintColor: focused ? COLORS.white : COLORS.gray,
@@ -51,7 +51,7 @@ const Tabs = ({ params }) => {
           opacity: 0.9,
           borderTopColor: 'transparent',
           height: 111,
-          borderRadius: 18,
+          borderRadius: SIZES.radius,
         },
       }}
     >
