@@ -1,12 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import * as Font from 'expo-font';
-import {
-  StyleSheet,
-  Text,
-  View,
-  ActivityIndicator,
-  StatusBar,
-} from 'react-native';
+import {StyleSheet,Text,View,ActivityIndicator,StatusBar,} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Tabs from './navigation/Tabs';
@@ -35,7 +29,7 @@ export default function App() {
         screenOptions={{
           headerShown: false,
         }}
-        initialRouteName="Featured"
+        initialRouteName="EventDetail"
       >
         <Stack.Screen name="Featured" component={Tabs} />
         <Stack.Screen name="EventDetail" component={EventDetail} />
@@ -49,7 +43,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
     alignItems: 'center',
     justifyContent: 'center',
   },
