@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import * as Font from 'expo-font';
-import {StyleSheet,Text,View,ActivityIndicator,StatusBar,} from 'react-native';
+import {StyleSheet,Text,View,ActivityIndicator,StatusBar,Image,Button,TouchableOpacity,ImageBackground} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createStackNavigator, HeaderTitle } from '@react-navigation/stack';
 import Tabs from './navigation/Tabs';
 import { Featured, EventDetail } from './screens';
 import { customFonts } from './constants';
+import { Icon } from 'react-native-elements';
 
 const Stack = createStackNavigator();
 
@@ -24,10 +25,28 @@ export default function App() {
 
   return assetsLoaded ? (
     <NavigationContainer>
-      <StatusBar barStyle="light-content"></StatusBar>
+      <StatusBar barStyle="default"></StatusBar>
       <Stack.Navigator
         screenOptions={{
-          headerShown: false,
+          headerShown: true,
+          headerTransparent: true,
+          headerTintColor: '#0093B2',
+          headerLeft: () => (
+            <TouchableOpacity onPress={() => navigate('EventDetail')}>
+              <Image style={{width: 28, height: 28, marginTop: 30, marginLeft: 30}} source={require("./assets/images/PLANEICON.png")}/>
+            </TouchableOpacity>
+          ),
+          headerTitle: () => (
+            <Text style={{color: '#0093B2', fontSize: 25, marginTop: 30, marginLeft: 20}}>Ikoflights</Text>
+          ),
+          headerRight: () => (
+            <View style={{ flexDirection:"row" }}>
+              <AppButton title="Booking Management" size="sm" backgroundColor='transparent' /> 
+              <AppButton title="Information and services" size="sm" backgroundColor='transparent' /> 
+              <AppButton title="Air Miles" size="sm" backgroundColor='transparent' />
+              <Icon name='menu' size={30} style={{ marginTop: 34, marginRight: 30 }} color='#0093B2' onPress={() => navigate('Featured')} />
+            </View>
+          )
         }}
         initialRouteName="EventDetail"
       >
@@ -39,6 +58,12 @@ export default function App() {
     <ActivityIndicator size="small"></ActivityIndicator>
   );
 }
+
+const AppButton = ({ onPress, title }) => (
+  <TouchableOpacity onPress={onPress} style={{ marginTop: 30, marginRight: 30 }}>
+    <Text style={{color: '#0093B2', fontSize: 25}}>{title}</Text>
+  </TouchableOpacity>
+);
 
 const styles = StyleSheet.create({
   container: {
