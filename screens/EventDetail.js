@@ -10,7 +10,7 @@ const EventDetail = ({ navigation, route }) => {
     
     <View style={styles.container}>
 
-      <ImageBackground source={image} resizeMode="contain" style = {styles.image}>
+      <ImageBackground source={image} resizeMode="cover" style = {styles.image}>
 
         <ImageBackground source={plane} resizeMode = "center" style = {{width: 700, height: 400, position: "absolute", marginTop: 450, marginLeft: 300}}></ImageBackground>
 

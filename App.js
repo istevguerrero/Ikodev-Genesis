@@ -41,7 +41,7 @@ export default function App() {
           ),
           headerRight: () => (
             <View style={{ flexDirection:"row" }}>
-              <AppButton title="Booking Management" size="sm" backgroundColor='transparent' /> 
+              <AppButton title= "Booking Managment" size="sm" backgroundColor='transparent' /> 
               <AppButton title="Information and services" size="sm" backgroundColor='transparent' /> 
               <AppButton title="Air Miles" size="sm" backgroundColor='transparent' />
               <Icon name='menu' size={30} style={{ marginTop: 34, marginRight: 30 }} color='#0093B2' onPress={() => navigate('Featured')} />
@@ -60,8 +60,8 @@ export default function App() {
 }
 
 const AppButton = ({ onPress, title }) => (
-  <TouchableOpacity onPress={onPress} style={{ marginTop: 30, marginRight: 30 }}>
-    <Text style={{color: '#0093B2', fontSize: 25}}>{title}</Text>
+  <TouchableOpacity onPress={onPress} style={{ marginTop: 30, marginRight: 30, width: 140 }}>
+    <Text style={{color: '#0093B2', fontSize: 24}}>{title}</Text>
   </TouchableOpacity>
 );
 
