@@ -3,9 +3,8 @@ import * as Font from 'expo-font';
 import {StyleSheet,Text,View,ActivityIndicator,StatusBar,Image,Button,TouchableOpacity,ImageBackground} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator, HeaderTitle } from '@react-navigation/stack';
-import Tabs from './navigation/Tabs';
 import { Featured, EventDetail, Mine } from './screens';
-import { customFonts } from './constants';
+import { customFonts } from './constants/'
 import { Icon } from 'react-native-elements';
 import {
   BrowserRouter as Router,
@@ -60,7 +59,6 @@ export default function App() {
           }}
           initialRouteName="EventDetail"
         >
-          <Stack.Screen name="Featured" component={Tabs} />
           <Stack.Screen name="EventDetail" component={EventDetail} />
         </Stack.Navigator>
       </NavigationContainer>
