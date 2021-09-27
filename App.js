@@ -4,9 +4,16 @@ import {StyleSheet,Text,View,ActivityIndicator,StatusBar,Image,Button,TouchableO
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator, HeaderTitle } from '@react-navigation/stack';
 import Tabs from './navigation/Tabs';
-import { Featured, EventDetail } from './screens';
+import { Featured, EventDetail, Mine } from './screens';
 import { customFonts } from './constants';
 import { Icon } from 'react-native-elements';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  NavLink,
+  Link
+} from "react-router-dom";
 
 const Stack = createStackNavigator();
 
@@ -24,36 +31,41 @@ export default function App() {
   });
 
   return assetsLoaded ? (
-    <NavigationContainer>
-      <StatusBar barStyle="default"></StatusBar>
-      <Stack.Navigator
-        screenOptions={{
-          headerShown: true,
-          headerTransparent: true,
-          headerTintColor: '#0093B2',
-          headerLeft: () => (
-            <TouchableOpacity onPress={() => navigate('EventDetail')}>
-              <Image style={{width: 28, height: 28, marginTop: 30, marginLeft: 30}} source={require("./assets/images/PLANEICON.png")}/>
-            </TouchableOpacity>
-          ),
-          headerTitle: () => (
-            <Text style={{color: '#0093B2', fontSize: 25, marginTop: 30, marginLeft: 20}}>Ikoflights</Text>
-          ),
-          headerRight: () => (
-            <View style={{ flexDirection:"row" }}>
-              <AppButton title= "Booking Managment" size="sm" backgroundColor='transparent' /> 
-              <AppButton title="Information and services" size="sm" backgroundColor='transparent' /> 
-              <AppButton title="Air Miles" size="sm" backgroundColor='transparent' />
-              <Icon name='menu' size={30} style={{ marginTop: 34, marginRight: 30 }} color='#0093B2' onPress={() => navigate('Featured')} />
-            </View>
-          )
-        }}
-        initialRouteName="EventDetail"
-      >
-        <Stack.Screen name="Featured" component={Tabs} />
-        <Stack.Screen name="EventDetail" component={EventDetail} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <Router>
+      <NavigationContainer>
+        <StatusBar barStyle="default"></StatusBar>
+        <Stack.Navigator
+          screenOptions={{
+            headerShown: true,
+            headerTransparent: true,
+            headerTintColor: '#0093B2',
+            headerLeft: () => (
+              <TouchableOpacity onPress={() => navigate('EventDetail')}>
+                <Image style={{width: 28, height: 28, marginTop: 30, marginLeft: 30}} source={require("./assets/images/PLANEICON.png")}/>
+              </TouchableOpacity>
+            ),
+            headerTitle: () => (
+              <Text style={{color: '#0093B2', fontSize: 25, marginTop: 30, marginLeft: 20}}>Ikoflights</Text>
+            ),
+            headerRight: () => (
+              <View style={{ flexDirection:"row" }}>
+                <AppButton title= "Booking Managment" size="sm" backgroundColor='transparent' /> 
+                <AppButton title="Information and services" size="sm" backgroundColor='transparent' /> 
+                <AppButton title="Air Miles" size="sm" backgroundColor='transparent' />
+                <NavLink to="/screens/mine">
+                  <Icon name='menu' size={30} style={{ marginTop: 34, marginRight: 30 }} color='#0093B2' />
+                </NavLink>
+              </View>
+            )
+          }}
+          initialRouteName="EventDetail"
+        >
+          <Stack.Screen name="Featured" component={Tabs} />
+          <Stack.Screen name="EventDetail" component={EventDetail} />
+        </Stack.Navigator>
+      </NavigationContainer>
+      <Route path="/screens/Mine" component={Mine}/>
+    </Router>
   ) : (
     <ActivityIndicator size="small"></ActivityIndicator>
   );

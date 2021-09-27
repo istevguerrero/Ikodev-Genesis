@@ -28,5 +28,12 @@
     "web": {
       "favicon": "./assets/favicon.png"
     }
+  },
+  "web": {
+    "build": {
+      "babel": {
+        "include": ["react-router-native"]
+      }
+    }
   }
 }
