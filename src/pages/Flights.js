@@ -27,7 +27,7 @@ export const Flights = () => {
 
                     <Row className="mx-0">
                         
-                        <Button as={Col} variant="secondary" className="mx-2">Vuelo #1</Button>
+                        <Button as={Col} variant="secondary" className="mx-2" style={{fontSize: "2.2rem"}}>Vuelo #1</Button>
                         
                     </Row>
 
@@ -36,7 +36,16 @@ export const Flights = () => {
 
                     <Row className="mx-0">
                         
-                        <Button as={Col} variant="secondary" className="mx-2">Vuelo #2</Button>
+                        <Button as={Col} variant="secondary" className="mx-2" style={{fontSize: "2.2rem"}}>Vuelo #2</Button>
+                        
+                    </Row>
+
+                    <br/>
+                    <br/>
+
+                    <Row className="mx-0">
+                        
+                        <Button as={Col} variant="secondary" className="mx-2" style={{fontSize: "2.2rem"}}>Vuelo #3</Button>
                         
                     </Row>
 
