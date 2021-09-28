@@ -12,7 +12,7 @@ export const Nav = styled.nav`
     z-index: 10;
 `
 export const NavLink = styled(Link)`
-    color: #00B0FF;
+    color: #0093B2;
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -21,14 +21,14 @@ export const NavLink = styled(Link)`
     cursor: pointer;
     font-size: 1.5rem;
     &.active{
-        color: #0091EA;
+        color: #0093B2;
     }
 `
 
 
 export const Bars = styled(FaBars)`
     
-    color: #0091EA;
+    color: #0093B2;
     display: block;
     position: relative;
     top: 0;
@@ -65,7 +65,7 @@ export const NavBtnLink = styled(Link)`
     border-radius: 4px;
     background: #00B0FF;
     padding: 10px 22px;
-    color: #fff;
+    color: #0093B2;
     border: none;
     outline: none;
     cursor: pointer;
@@ -74,7 +74,7 @@ export const NavBtnLink = styled(Link)`
 
     &.hover{
         transition: all 0.2s ease-in-out;
-        background: #fff;
-        color: #0091EA;
+        background: #0093B2;
+        color: #0093B2;
     }
 `

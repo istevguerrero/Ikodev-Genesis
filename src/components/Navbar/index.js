@@ -3,29 +3,48 @@ import {Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink} from './NavbarElements'
 import pIcon from '../../assets/images/PLANEICON.png'
 
 const Navbar = () => {
+    
     return (
-        <>
+
             <Nav>
+
                 <NavLink to="/">
+
                     <img src={pIcon}></img>
+
                     <div style={{paddingLeft: "10%"}}>Ikoflights</div>
+
                 </NavLink>
+
                 <NavMenu>
+
                     <NavLink to="booking-managment" activeStyle>
+
                         Booking Managment
+                        
                     </NavLink>
+
                     <NavLink to="information-services" activeStyle>
+
                         Information Services
+
                     </NavLink>
+
                     <NavLink to="air-miles" activeStyle>
+
                         Air Miles
+
                     </NavLink>
+
                 </NavMenu>
+
                 <NavBtn>
-                    <Bars />
+
+                    <Bars/>
+
                 </NavBtn>
+
             </Nav>
-        </>
     )
 }
 
