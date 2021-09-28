@@ -24,7 +24,7 @@ const Navbar = () => {
                         
                     </NavLink>
 
-                    <NavLink to="information-services" activeStyle>
+                    <NavLink to="/Info-Services" activeStyle>
 
                         Information Services
 
