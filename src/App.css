@@ -1,5 +1,5 @@
 .logo {
-	width: 200%;
+	width: 150%;
   padding-top: 70%;
 }
 
@@ -13,8 +13,8 @@
 	position: relative;
 	z-index: 4;
 	width: 500px;
-	left: 10vw;
-	top: 10vw;
+	left: 12vw;
+	top: 2vw;
 }
 
 .overlay {

@@ -1,33 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
 import React from "react";
-import backgroundImage from './assets/images/background.png';
-import planeImage from './assets/images/plane.png'
-
+import Navbar from './components/Navbar';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import { Booking } from './pages/Booking-managment';
+import { Home } from './pages/Home';
 
 function App() {
   return (
-
-    <div className = "hero">
-
-      <div className = "content">
-
-        <img className="logo" src={planeImage}/>
-
-      </div>
-
-      <div className = "overlay" style={{background: `url(${backgroundImage})`, backgroundSize: "cover", backgroundPosition: "center", height: "100vh"}}>
-
-        <div style={{ color: '#0093B2', position: "absolute", fontSize: 40, paddingLeft: "55%", paddingTop: "26%"}}>Season Sales</div>
-
-        <div style={{ color: '#0093B2', position: "absolute", fontSize: 50, paddingLeft: "55%", paddingTop: "29%"}}>6% Discount on China, Japan &</div>
-
-        <div style={{ color: '#0093B2', position: "absolute", fontSize: 50, paddingLeft: "55%", paddingTop: "31.5%"}}>South Korea</div>
-
-        
-      </div>
-
-    </div>
+    
+    <Router> 
+          <Navbar />
+          <Switch>
+            <Route path="/" exact component={Home}/> 
+            <Route path="/booking-managment" component={Booking}/>
+          </Switch>
+    </Router>
 
     
   );
