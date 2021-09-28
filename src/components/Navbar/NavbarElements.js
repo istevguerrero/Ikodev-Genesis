@@ -43,7 +43,7 @@ export const NavMenu = styled.div`
     align-items: center;
     margin-right: -24px;
     padding-right: 30px;
-    padding-left: 725%;
+    padding-left: 1225%;
 
     @media screen and (max-width: 768px){
         display: none;
