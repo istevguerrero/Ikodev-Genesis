@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import { Booking } from './pages/Booking-managment';
 import { Home } from './pages/Home';
+import { Information } from './pages/Info-Services';
 
 function App() {
 
@@ -21,7 +22,9 @@ function App() {
             
           </Switch>
 
-          <Route path="/booking-managment" component={Booking}/>
+            <Route path="/booking-managment" component={Booking}/>
+
+            <Route path="/Info-Services" component={Information}/>
 
     </Router>
     
