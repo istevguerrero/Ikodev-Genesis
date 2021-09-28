@@ -1,6 +1,7 @@
 import React from 'react'
 import backgroundImage from '../assets/images/background.png';
-import planeImage from '../assets/images/plane.png'
+import planeImage from '../assets/images/plane.png';
+import { Nav, NavLink } from '../components/Navbar/NavbarElements';
 
 export const Booking = () => {
     return (
@@ -37,9 +38,16 @@ export const Booking = () => {
 
                                 Return Date:
                                 <input type="text" name="name" />
+                                
+                                <Nav>
 
+                                    <NavLink to="flights">
 
-                                <input type="submit" value="Search Flighs" />
+                                        <input type="submit" value="Search Flighs" />
+
+                                    </NavLink>
+
+                                </Nav>
                         </form>
 
                     </div>
