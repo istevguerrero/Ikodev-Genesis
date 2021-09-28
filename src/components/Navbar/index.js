@@ -1,12 +1,14 @@
 import React from 'react'
 import {Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink} from './NavbarElements'
+import pIcon from '../../assets/images/PLANEICON.png'
 
 const Navbar = () => {
     return (
         <>
             <Nav>
                 <NavLink to="/">
-                    <h1>Logo</h1>
+                    <img src={pIcon}></img>
+                    <div style={{paddingLeft: "10%"}}>Ikoflights</div>
                 </NavLink>
                 <NavMenu>
                     <NavLink to="booking-managment" activeStyle>

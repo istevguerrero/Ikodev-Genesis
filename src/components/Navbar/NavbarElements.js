@@ -32,7 +32,7 @@ export const Bars = styled(FaBars)`
     display: block;
     position: relative;
     top: 0;
-    left: 45px;
+    left: 22%;
     font-size: 1.8rem;
     cursor: pointer;
         
@@ -43,7 +43,7 @@ export const NavMenu = styled.div`
     align-items: center;
     margin-right: -24px;
     padding-right: 30px;
-    padding-left: 1230px;
+    padding-left: 725%;
 
     @media screen and (max-width: 768px){
         display: none;

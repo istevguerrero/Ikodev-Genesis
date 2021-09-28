@@ -1,6 +1,6 @@
 .logo {
-	width: 150%;
-  padding-top: 70%;
+	width: 130%;
+  	padding-top: 45%;
 }
 
 .hero {
@@ -13,8 +13,8 @@
 	position: relative;
 	z-index: 4;
 	width: 500px;
-	left: 12vw;
-	top: 2vw;
+	left: 7%;
+
 }
 
 .overlay {
