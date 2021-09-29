@@ -62,19 +62,7 @@ export const NavBtn = styled.nav`
 `
 
 export const NavBtnLink = styled(Link)`
-    border-radius: 4px;
-    background: #00B0FF;
-    padding: 10px 22px;
-    color: #0093B2;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
+    padding: 0.4% 2%;
     text-decoration: none;
 
-    &.hover{
-        transition: all 0.2s ease-in-out;
-        background: #0093B2;
-        color: #0093B2;
-    }
 `

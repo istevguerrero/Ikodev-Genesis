@@ -21,13 +21,14 @@ function App() {
 
             <Route path="/" exact component={Home}/> 
             
-          </Switch>
-
             <Route path="/booking-managment" component={Booking}/>
 
             <Route path="/Info-Services" component={Information}/>
 
             <Route path="/flights" component={Flights}/>
+
+          </Switch>
+
     </Router>
     
   );

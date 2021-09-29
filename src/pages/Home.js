@@ -23,9 +23,9 @@ export const Home = () => {
 
           <div style={{ color: '#0093B2', position: "absolute", fontSize: 50, paddingLeft: "55%", paddingTop: "26.5%"}}>South Korea</div>
 
-          <Nav style={{position: "absolute", paddingLeft: "54.3%", paddingTop: "31.5%", width: "160px", height: "45px", fontSize: "1.3rem", justifyContent: "center"}}>
+          <Nav style={{position: "absolute", paddingLeft: "19%", paddingTop: "31.5%", width: "100%", height: "45px", fontSize: "1.3rem", justifyContent: "center"}}>
 
-            <NavBtnLink to="booking-managment" activeStyle style={{background: "linear-gradient(90deg, rgba(218,12,212,1) 53%, rgba(144,36,200,1) 89%)"}}>
+            <NavBtnLink to="booking-managment" activeStyle style={{color: "white", borderRadius: 55, position: "absolute", background: "rgb(240,127,222)", background: "linear-gradient(90deg, rgba(240,127,222,1) 0%, rgba(141,68,231,1) 100%)", boxShadow: "-2px 6px 25px #D26DDD"}}>
 
               Book Now
 
