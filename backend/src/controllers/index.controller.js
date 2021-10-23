@@ -17,20 +17,30 @@ dbclient.connect((error) => {
 
 const getUsers = async (req, res) => {
 
-    const response = await dbclient.query('SELECT * FROM ticket', (error, dbresponse) => {
+    const query = "SELECT * FROM ticket"
 
-        if(error)
+    let response = {};
 
-            console.log("Hubo un error el consultar lo tiquetes")
+    dbclient.query(query, (error, dbresponse) => {
 
-        else
+        if (error) {
+
+            console.log("Hubo un error el consultar lo tiquetes");
+
+            response = { status: 500, data: null, message: "Hubo un error el consultar lo tiquetes" };
+
+        }
+
+        else {
 
             console.log("Los tickets son: ", dbresponse.rows);
 
+            response = { status: 200, data: dbresponse.rows, message: "Tickets encontrados exitosamente" };
+        }
+
+        res.json(response);
 
     });
-
-    response.json({ message: "Se ejecuto el endpoint"})
 
 }
 
