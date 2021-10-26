@@ -8,32 +8,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const Flights = () => {
 
-    const [tickets, getTickets] = useState('');
-
-    useEffect(() => {
-
-        getAllTickets();
-
-    }, [])
-
-    const getAllTickets = () => {
-
-        axios.get('http://localhost:4000/users')
-        .then((response) => {
-
-            const allTickets = response.data.data.allTickets;
-
-            getTickets(allTickets);
-
-        })
-
-        
-
-
-
-    }
-    
-
     useEffect(() => {
 
         axios.get('http://localhost:4000/users').then((response) => {
