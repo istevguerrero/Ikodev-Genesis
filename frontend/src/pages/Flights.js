@@ -2,9 +2,48 @@ import React from 'react'
 import backgroundImage from '../assets/images/background.png';
 import planeImage from '../assets/images/plane.png'
 import { ListGroup, Container, Row, Col, Button, ButtonGroup } from 'react-bootstrap';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const Flights = () => {
+
+    const [tickets, getTickets] = useState('');
+
+    useEffect(() => {
+
+        getAllTickets();
+
+    }, [])
+
+    const getAllTickets = () => {
+
+        axios.get('http://localhost:4000/users')
+        .then((response) => {
+
+            const allTickets = response.data.data.allTickets;
+
+            getTickets(allTickets);
+
+        })
+
+        
+
+
+
+    }
+    
+
+    useEffect(() => {
+
+        axios.get('http://localhost:4000/users').then((response) => {
+
+            console.log("La respuesta a la peticion es", response.data.data);
+
+        })
+
+    })
+
     return (
 
         <div className = "hero">
