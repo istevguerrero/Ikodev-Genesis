@@ -60,6 +60,17 @@ export const NavBtn = styled.nav`
     }
 
 `
+export const NavCollapse = styled.nav`
+    position: fixed;
+    top: 56px;
+    background: #343a40;
+    right: -100%; /* pull the menu out of the viewport from right */
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    transition: right 0.3s ease; /* transition for smooth sliding */
+    }
+`
 
 export const NavBtnLink = styled(Link)`
     padding: 0.4% 2%;

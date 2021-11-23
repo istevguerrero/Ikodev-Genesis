@@ -1,7 +1,8 @@
 import React from 'react';
+import ReactPlayer from 'react-player';
 import backgroundImage from '../assets/images/background.png';
 
-export const Information = () => {
+export const Information = () => { 
 
     return (
 
@@ -21,9 +22,9 @@ export const Information = () => {
                     
                         <div className = "card" style = {{top: "33%", right: "20%", transform: "translate(-50%, -50%)", paddingTop: "10%", paddingLeft: "46%", position: "absolute",  boxShadow: "4px 4px #ffffff"}}>
                             
-                            <div style = { { color: "#000000", top: "1%", right: "50%", transform: "translate(-50%, -50%)", fontSize: "150%", paddingTop: "10%", marginLeft: "70%", position: "absolute", width: "30%"}}>
+                            <div style = { { color: "#000000", top: "28%", right: "-48%", transform: "translate(-50%, -50%)", fontSize: "150%", paddingTop: "10%", marginLeft: "40%", position: "absolute", width: "98%", textAlign: "justify"}}>
                                 
-                                Comming soon!
+                            Ikoflight es una aerolinea pequeña que se especializa en vuelos nacionales. Fue fundada el primero de septiembre del 2021 por la pequeña empresa Ikodev, comenzando como el proyecto Genesis. Nuestro principal objetivo, a parte de brindar la mejor experiencia de vuelo para los usuarios es ofrecer una aplicacion web sencilla y comoda de usar para la compra de tiquetes.
                             
                             </div>
                         
@@ -37,13 +38,23 @@ export const Information = () => {
 
                         <div className = "card" style = {{top: "75%", right: "20%", transform: "translate(-50%, -50%)", paddingTop: "10%", paddingLeft: "46%", position: "absolute",  boxShadow: "4px 4px #ffffff"}}>
                             
-                            <div style = { { color: "#000000", top: "1%", right: "50%", transform: "translate(-50%, -50%)", fontSize: "150%", paddingTop: "10%", marginLeft: "70%", position: "absolute", width: "30%"}}>
+                        <div style = { { color: "#000000", top: "28%", right: "-48%", transform: "translate(-50%, -50%)", fontSize: "150%", paddingTop: "10%", marginLeft: "40%", position: "absolute", width: "98%"}}>
                                 
-                                Comming soon!
-                            
+                            - Compra de tiquetes de vuelo<br></br>
+                            - Informacion sobre vuelos nacionales y vuelos por Latinoamerica<br></br>
+                            - Vuelos directos o con escala<br></br>
+                            - Vuelos con unica o varias aerolineas<br></br>
+                            - Para mas informacion contactar al siguiente correo: cdriascosr136@gmail.com
+
                             </div>
                         
                         </div>
+                        
+                        <div style = {{position: "absolute", top: "30%", left: "60%"}}>
+                        <ReactPlayer url="https://www.youtube.com/watch?v=XP7KRHY564M&t" />
+                        </div>
+                        
+                        
                 </div>
 
                 </div>
